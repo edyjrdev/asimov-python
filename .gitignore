@@ -1,0 +1,61 @@
+# ===================================================================
+# Arquivo .gitignore para Python com Poetry & Pyenv
+# ===================================================================
+
+# --- Ambientes Virtuais --------------------------------------------
+# Ignora o ambiente virtual que o Poetry (ou venv) cria no projeto
+# (Criado se 'poetry config virtualenvs.in-project true' for usado)
+.venv/
+venv/
+env/
+.env/
+
+# --- Artefatos de Build (Poetry / Setuptools) ----------------------
+# Diretório de distribuição do Poetry
+dist/
+# Arquivos de build legados
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# --- Python Bytecode & Caches --------------------------------------
+# Cache do Python
+__pycache__/
+# Bytecode compilado
+*.pyc
+*.pyo
+*.pyd
+# Arquivos de backup de editores
+*~
+
+# --- Segredos & Arquivos de Configuração Local ---------------------
+# NUNCA comite segredos, chaves de API ou senhas!
+# Arquivos de ambiente
+.env
+.env.*
+*.env
+# Não ignore o .env.example, se você tiver um
+!.env.example
+
+# --- Testes & Cobertura --------------------------------------------
+# Cache do Pytest
+.pytest_cache/
+# Arquivos de cobertura de testes
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# --- IDEs & Editores -----------------------------------------------
+# VSCode
+.vscode/
+# PyCharm
+.idea/
+
+# --- Arquivos de Sistema Operacional -------------------------------
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
